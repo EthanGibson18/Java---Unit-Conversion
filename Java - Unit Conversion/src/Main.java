@@ -1,9 +1,8 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // 12 inches = 1 foot, 18 inches = 1 cubit, 2.5 feet = 1 step, 3 feet = 1 yard, 5280 feet = 1 mile
         System.out.print("Hello World!!");
     }
 }
