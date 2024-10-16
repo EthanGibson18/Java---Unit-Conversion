@@ -2,25 +2,28 @@ public class Main
 {
     public static void main(String[] args)
     {
+
+        float inch;
         float inchToFoot = inch / 12;
         float inchToCubit = inch / 18;
-        float inchToStep = (inch / 12) / 2.5;
+        double inchToStep = (inch / 12) / 2.5;
         float inchToYard = (inch / 12) / 3;
         float inchToMile = (inch / 12) / 5280;
 
+        float foot;
         float footToInch = foot * 12;
-        float footToCubit =
+        float footToCubit = (foot * 12) / 18;
 
-
+        float cubit;
         float cubit = inch * 18;
 
-
+        float step;
         float step = (float) (foot * 2.5);
 
-
+        float yard;
         float yard = foot * 3;
 
-
+        float mile;
         float mile = foot * 5280;
 
 
