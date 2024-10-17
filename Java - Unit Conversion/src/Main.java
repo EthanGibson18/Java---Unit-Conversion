@@ -1,9 +1,43 @@
+import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args)
     {
+        //Original unit to convert
+        String ogUnit;
+        //New unit that's being converted to
+        String newUnit;
+        //Number of the original unit
+        double ogNumb;
+        //New number it was converted to
+        double newNumb;
 
-        float inch;
+        //Unit types
+        String
+
+        //Units numbers for conversions
+        double inchNum;
+        double footNum;
+        double cubitNum;
+        double step;
+        double yard;
+        double mile;
+
+        Scanner inputDevice = new Scanner (System.in);
+        //Shows the text in quotations
+        System.out.println("Enter the original unit type: ");
+        //User enters the original unit they want to convert
+        ogUnit = inputDevice.nextLine(inch, foot, cubit, step, yard, mile);
+        //Shows the text in quotations
+        System.out.println("Enter the number for that unit type: ");
+        //User enters the original number of the original unit
+        ogNumb = Double.parseDouble(inputDevice.nextLine());
+
+        //Shows the text in quotations
+        System.out.println("Enter the new unit type: ");
+        //User enters the new unit that it is converted to
+        newUnit = inputDevice.nextLine(inch, foot, cubit, step, yard, mile);
+
         float inchToFoot = inch / 12;
         float inchToCubit = inch / 18;
         double inchToStep = (inch / 12) / 2.5;
