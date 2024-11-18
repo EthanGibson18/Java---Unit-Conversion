@@ -60,19 +60,31 @@ public class Main
         //cubit conversions
         double cubitToInch = cubitNum * 18;
         double cubitToFoot = cubitNum * 1.5;
-        double cubitToStep = cubitNum ;
+        double cubitToStep = cubitNum * 0.6;
+        double cubitToYard = cubitNum * 0.5;
+        double cubitToMile = cubitNum / 3520 ;
 
         //step conversions
-        float step;
-        float step = (float) (foot * 2.5);
+        double stepToInch = stepNum * 30;
+        double stepToFoot = stepNum * 2.5;
+        double stepToCubit = stepNum / 0.6;
+        double stepToYard = stepNum / 1.2;
+        double stepToMile = stepNum / 2112;
 
         //yard conversions
-        float yard;
-        float yard = foot * 3;
+        double yardToInch = yardNum * 36;
+        double yardToFoot = yardNum * 3;
+        double yardToCubit = yardNum * 2;
+        double yardToStep = yardNum * 1.2;
+        double yardToMile = yardNum / 1760;
 
         //mile conversions
-        float mile;
-        float mile = foot * 5280;
+        double mileToInch = mileNum * 63360;
+        double mileToFoot = mileNum * 5280;
+        double mileToCubit = mileNum * 3520;
+        double mileToStep = mileNum * 2112;
+        double mileToYard = mileNum * 1760;
+
 
 
         conversion =
