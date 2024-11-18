@@ -8,20 +8,25 @@ public class Main
         //New unit that's being converted to
         String newUnit;
         //Number of the original unit
-        double ogNumb;
+        double ogNum;
         //New number it was converted to
-        double newNumb;
+        double newNum;
 
         //Unit types
-        String
+        String inch;
+        String foot;
+        String cubit;
+        String step;
+        String yard;
+        String mile;
 
         //Units numbers for conversions
         double inchNum;
         double footNum;
         double cubitNum;
-        double step;
-        double yard;
-        double mile;
+        double stepNum;
+        double yardNum;
+        double mileNum;
 
         Scanner inputDevice = new Scanner (System.in);
         //Shows the text in quotations
@@ -31,32 +36,41 @@ public class Main
         //Shows the text in quotations
         System.out.println("Enter the number for that unit type: ");
         //User enters the original number of the original unit
-        ogNumb = Double.parseDouble(inputDevice.nextLine());
+        ogNum = Double.parseDouble(inputDevice.nextLine());
 
         //Shows the text in quotations
         System.out.println("Enter the new unit type: ");
         //User enters the new unit that it is converted to
         newUnit = inputDevice.nextLine(inch, foot, cubit, step, yard, mile);
 
-        float inchToFoot = inch / 12;
-        float inchToCubit = inch / 18;
-        double inchToStep = (inch / 12) / 2.5;
-        float inchToYard = (inch / 12) / 3;
-        float inchToMile = (inch / 12) / 5280;
+        //Inches conversion
+        double inchToFoot = inchNum / 12;
+        double inchToCubit = inchNum / 18;
+        double inchToStep = inchNum / 30;
+        double inchToYard = inchNum / 36;
+        double inchToMile = inchNum / 63360;
 
-        float foot;
-        float footToInch = foot * 12;
-        float footToCubit = (foot * 12) / 18;
+        //foot conversions
+        double footToInch = footNum * 12;
+        double footToCubit = footNum / 1.5;
+        double footToStep = footNum / 2.5;
+        double footToYard = footNum / 3;
+        double footToMile = footNum / 5280;
 
-        float cubit;
-        float cubit = inch * 18;
+        //cubit conversions
+        double cubitToInch = cubitNum * 18;
+        double cubitToFoot = cubitNum * 1.5;
+        double cubitToStep = cubitNum ;
 
+        //step conversions
         float step;
         float step = (float) (foot * 2.5);
 
+        //yard conversions
         float yard;
         float yard = foot * 3;
 
+        //mile conversions
         float mile;
         float mile = foot * 5280;
 
