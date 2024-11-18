@@ -3,72 +3,72 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //ogUnit is converted to newUnit and value is given to ogUnit
+        //ogUnit is converted to newUnit and ogNum is given to ogUnit
         String ogUnit;
         String newUnit;
-        double value;
+        double ogNum;
 
         Scanner inputConverter = new Scanner(System.in);
-        //inputs for ogUnit, newUnit, and value
+        //inputs for ogUnit, newUnit, and ogNum
         System.out.print("Please enter the unit of measure that you want to convert from: ");
         ogUnit = inputConverter.nextLine();
 
         System.out.print("Please enter the unit of measure that you want to convert to: ");
         newUnit = inputConverter.nextLine();
 
-        System.out.print("Please enter the value for the unit of measure that you want to convert from: ");
-        value = inputConverter.nextDouble();
+        System.out.print("Please enter the number for the unit of measure that you want to convert from: ");
+        ogNum = inputConverter.nextDouble();
 
         //stores the conversion result
         double result = 0;
 
         //performs the conversion according to the input and output units
-        result = convertUnits(ogUnit, newUnit, value);
+        result = convertUnits(ogUnit, newUnit, ogNum);
 
         //if result = -1, it means an invalid unit was used
         if (result != -1)
         {
-            System.out.println(value + " " + ogUnit + " equals " + result + " " + newUnit);
+            System.out.println(ogNum + " " + ogUnit + " = " + result + " " + newUnit);
         }
         else
         {
-            System.out.println("The unit entered is invalid. The units allowed are inches, feet, cubits, steps, yards, and miles.");
+            System.out.println("The unit entered is invalid. Please use the words inches, feet, cubits, steps, yards, and miles.");
         }
     }
 
     //unit conversion is done here
-    public static double convertUnits(String firstUnit, String secondUnit, double value)
+    public static double convertUnits(String ogUnit, String newUnit, double ogNum)
     {
 
         //unit conversion to inches as a base
-        double inchesPerFeet = 12.0;
+        double inchesPerFoot = 12.0;
         double inchesPerCubit = 18.0;
-        double inchesPerSteps = 30.0;
-        double inchesPerYards = 36.0;
-        double inchesPerMiles = 63360.0;
+        double inchesPerStep = 30.0;
+        double inchesPerYard = 36.0;
+        double inchesPerMile = 63360.0;
 
-        //convert firstUnit to inches first
+        //convert ogUnit to inches first
         double valueInInches = 0;
 
-        switch (firstUnit)
+        switch (ogUnit)
         {
             case "inches":
-                valueInInches = value;
+                valueInInches = ogNum;
                 break;
             case "feet":
-                valueInInches = value * inchesPerFeet;
+                valueInInches = ogNum * inchesPerFoot;
                 break;
             case "cubits":
-                valueInInches = value * inchesPerCubit;
+                valueInInches = ogNum * inchesPerCubit;
                 break;
             case "steps":
-                valueInInches = value * inchesPerSteps;
+                valueInInches = ogNum * inchesPerStep;
                 break;
             case "yards":
-                valueInInches = value * inchesPerYards;
+                valueInInches = ogNum * inchesPerYard;
                 break;
             case "miles":
-                valueInInches = value * inchesPerMiles;
+                valueInInches = ogNum * inchesPerMile;
                 break;
             //indicates the use of an invalid input unit
             default:
@@ -76,20 +76,20 @@ public class Main
         }
 
         //convert from inches to desired unit
-        switch (secondUnit)
+        switch (newUnit)
         {
             case "inches":
                 return valueInInches;
             case "feet":
-                return valueInInches * inchesPerFeet;
+                return valueInInches * inchesPerFoot;
             case "cubits":
                 return valueInInches * inchesPerCubit;
             case "steps":
-                return valueInInches * inchesPerSteps;
+                return valueInInches * inchesPerStep;
             case "yards":
-                return valueInInches * inchesPerYards;
+                return valueInInches * inchesPerYard;
             case "miles":
-                return valueInInches * inchesPerMiles;
+                return valueInInches * inchesPerMile;
             //indicates the use of an invalid output unit
             default:
                 return -1;
